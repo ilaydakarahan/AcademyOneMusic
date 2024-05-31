@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using OneMusic.EntityLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace OneMusic.DataAccessLayer.Context
     //Paketler : EFC , EFC.tools , EFC.sqlserver , EFC.Design bunlar 4 adet paket, kullanılan sürümün son sürümü 
     //Bir de migration oluşturmadan webuı kısmı setas startup proje seçilip oraya da efc-design paketi yüklenir.
     //Migration oluştururken mutlaka data access katmanı seçilmeli.
-    public class OneMusicContext : DbContext
+    public class OneMusicContext : IdentityDbContext<AppUser,AppRole,int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)       //protected:sınıftan miras alma(dbcontext sınıfından aldık)
                                                                                             //override:miras aldığımız sınıftaki metodu ezme,configuration metodunu içine kendimiz yapı oluşturucaz.
