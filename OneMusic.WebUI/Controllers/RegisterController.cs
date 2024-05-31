@@ -39,6 +39,9 @@ namespace OneMusic.WebUI.Controllers
                 var result=await _userManager.CreateAsync(user , model.Password);    //2 parametre bekliyor, birincisi yukarıdan gelen user, diğerine password u vericez, o hashlicek.
                 if(result.Succeeded)
                 {
+
+                    await _userManager.AddToRoleAsync(user, "Visitor");     //Dışarıdan bir kullanıcı geldiğinde otomatik visitor rolü atanacak ona.
+                                                                        //Sonrasında istenen rolü admin kendi tarafında verebilir.
                     return RedirectToAction("Index", "Login");
                 }
                 foreach (var item in result.Errors)

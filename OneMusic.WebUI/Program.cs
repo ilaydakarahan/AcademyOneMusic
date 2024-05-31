@@ -2,6 +2,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using OneMusic.BusinessLayer.Abstract;
 using OneMusic.BusinessLayer.Concrete;
+using OneMusic.BusinessLayer.Validators;
 using OneMusic.DataAccessLayer.Abstract;
 using OneMusic.DataAccessLayer.Concrete;
 using OneMusic.DataAccessLayer.Context;
@@ -12,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<OneMusicContext>();
+builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<OneMusicContext>().AddErrorDescriber<CustomErrorDescriber>();
 
 builder.Services.AddScoped<IAboutDal, AboutDal>();
 builder.Services.AddScoped<IAboutService, AboutManager>();
