@@ -16,12 +16,17 @@ namespace OneMusic.DataAccessLayer.Concrete
         private readonly OneMusicContext _context;
         public AlbumDal(OneMusicContext context) : base(context)
         {
-            _context=context;
+            _context = context;
+        }
+
+        public List<Album> GetAlbumsByArtist(int id)
+        {
+            return _context.Albums.Include(y=>y.AppUser).Where(x => x.AppUserId == id).ToList();
         }
 
         public List<Album> GetAlbumsWithSinger()    //Albüm sınıfı ve singer sınıfı bağlantılı. Singer sınıfındaki nesneleri tabloda birleştirebilmek için böyle metod tanımlıyoruz.
         {                                           //Ialbumdal,albumdal,Albumservice,Albummanager katmanlarında metodu tanımla.
-           return _context.Albums.Include(x=>x.Singer).ToList();
+            return _context.Albums.Include(x => x.Singer).ToList();
         }
     }
 }

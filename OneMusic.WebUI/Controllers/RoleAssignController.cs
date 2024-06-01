@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using OneMusic.EntityLayer.Entities;
 using OneMusic.WebUI.Models;
 
 namespace OneMusic.WebUI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RoleAssignController : Controller
     {
         private readonly UserManager<AppUser> _userManager;

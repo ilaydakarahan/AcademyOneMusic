@@ -48,6 +48,8 @@ builder.Services.AddControllersWithViews(option =>
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Login/Index";
+    options.AccessDeniedPath = "/ErrorPage/AccessDenied";
+    options.LogoutPath = "/Login/LogOut";
 });
 
 
@@ -61,6 +63,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+app.UseStatusCodePagesWithReExecute("/ErrorPage/Error404" , "?code{0}");    //404 hatasý için yazdýk.
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -72,4 +76,14 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
+
+
 app.Run();
+
