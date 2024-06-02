@@ -24,9 +24,5 @@ namespace OneMusic.DataAccessLayer.Concrete
             return _context.Albums.Include(y=>y.AppUser).Where(x => x.AppUserId == id).ToList();
         }
 
-        public List<Album> GetAlbumsWithSinger()    //Albüm sınıfı ve singer sınıfı bağlantılı. Singer sınıfındaki nesneleri tabloda birleştirebilmek için böyle metod tanımlıyoruz.
-        {                                           //Ialbumdal,albumdal,Albumservice,Albummanager katmanlarında metodu tanımla.
-            return _context.Albums.Include(x => x.Singer).ToList();
-        }
     }
 }

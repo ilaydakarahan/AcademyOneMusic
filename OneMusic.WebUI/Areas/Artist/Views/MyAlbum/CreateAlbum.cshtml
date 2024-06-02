@@ -1,21 +1,20 @@
 ﻿@model Album
 @{
     ViewData["Title"] = "CreateAlbum";
-    Layout = "~/Views/AdminLayout/Index.cshtml";
+    Layout = "~/Areas/Artist/Views/ArtistLayout/Index.cshtml";
 }
 
-<h3>Albüm Ekleme Sayfası</h3>
+<h3>Yeni Albüm Oluştur</h3>
 
 <form method="post">
+	<label>Albüm Adı</label>
+	<input type="text" asp-for="AlbumName" class="form-control" />
+	<br />
+
     <label>Resim Url</label>
     <input type="text" asp-for="CoverImage" class="form-control" />
     <br />
-    <label>Sanatçı Adı</label>
-    <input type="text" asp-for="AppUser" class="form-control" />
-    <br />
-    <label>Albüm Adı</label>
-    <input type="text" asp-for="AlbumName" class="form-control" />
-    <br />
+
     <label>Fiyatı</label>
     <input type="text" asp-for="Price" class="form-control" />
     <br />
