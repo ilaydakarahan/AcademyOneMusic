@@ -33,6 +33,11 @@ namespace OneMusic.BusinessLayer.Concrete
             return _albumDal.GetAlbumsByArtist(id);
         }
 
+        public List<Album> TGetAlbumswithArtist()
+        {
+            return _albumDal.GetAlbumswithArtist();
+        }
+
         public Album TGetById(int id)
         {
            return _albumDal.GetById(id);

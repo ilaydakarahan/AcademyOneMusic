@@ -20,27 +20,27 @@ namespace OneMusic.BusinessLayer.Concrete
 
         public void TCreate(Song entity)
         {
-            throw new NotImplementedException();
+            _songDal.Create(entity);
         }
 
         public void TDelete(int id)
         {
-            throw new NotImplementedException();
+            _songDal.Delete(id);
         }
 
         public Song TGetById(int id)
         {
-            throw new NotImplementedException();
+            return _songDal.GetById(id);
         }
 
         public List<Song> TGetList()
         {
-            throw new NotImplementedException();
+            return _songDal.GetList();
         }
 
         public void TUpdate(Song entity)
         {
-            throw new NotImplementedException();
+            _songDal.Update(entity);
         }
     }
 }

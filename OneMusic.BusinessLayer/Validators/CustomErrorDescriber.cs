@@ -47,5 +47,13 @@ namespace OneMusic.BusinessLayer.Validators
 				Description = "Şifre en az 1 özel karakter(*,+,_,.) içermelidir."
 			};
 		}
+
+		public override IdentityError DuplicateUserName(string userName)
+		{
+			return new IdentityError
+			{
+				Description = "Bu kullanıcı adı daha önce alınmıştır."
+			};
+		}
 	}
 }
