@@ -1,0 +1,41 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>İletişim</h3>
+@{
+    int count = 0;
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Adres</th>
+        <th>E-Mail</th>
+        <th>Telefon</th>
+        <th>Harita</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <th>@count</th>
+            <td>@item.Address </td>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.MapUrl.Substring(0,30) ...</td>
+            <td>
+				<button class="btn btn-outline-danger" asp-action="DeleteContact" asp-route-id="@item.ContactId">Sil</button>
+                <a class="btn btn-outline-info" asp-action="UpdateContact" asp-route-id="@item.ContactId">Güncelle</a>
+            </td>
+        </tr>
+    }
+</table>
+
+<a class="btn btn-outline-primary" asp-action="CreateContact">Yeni İletişim Alanı Oluştur</a>
+
+<script>
+

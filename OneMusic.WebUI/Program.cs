@@ -36,6 +36,10 @@ builder.Services.AddScoped<ISingerService, SingerManager>();
 builder.Services.AddScoped<ISongDal, SongDal>();
 builder.Services.AddScoped<ISongService, SongManager>();
 
+builder.Services.AddScoped<ICategoryDal, CategoryDal>();
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+
+
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 builder.Services.AddDbContext<OneMusicContext>();   //Context nesnesini bildiriyoruz.
