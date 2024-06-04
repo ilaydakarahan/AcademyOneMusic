@@ -19,13 +19,15 @@ namespace OneMusic.WebUI.Controllers
 		private readonly UserManager<AppUser> _userManager;
 		private readonly IAlbumService _albumService;
 		private readonly OneMusicContext _oneMusicContext;
+		private readonly ISongService _songService;
 
-		public AlbumsController(UserManager<AppUser> userManager, ICategoryService categoryService, IAlbumService albumService, OneMusicContext oneMusicContext)
+		public AlbumsController(UserManager<AppUser> userManager, ICategoryService categoryService, IAlbumService albumService, OneMusicContext oneMusicContext, ISongService songService)
 		{
 			_userManager = userManager;
 			_categoryService = categoryService;
 			_albumService = albumService;
 			_oneMusicContext = oneMusicContext;
+			_songService = songService;
 		}
 
 		public async Task<IActionResult> Index()
@@ -117,5 +119,6 @@ namespace OneMusic.WebUI.Controllers
 
 			return RedirectToAction("Index");
 		}
+
 	}
 }
