@@ -48,6 +48,11 @@ namespace OneMusic.BusinessLayer.Concrete
             return _songDal.GetSongswithAlbumByUserId(id);
 		}
 
+		public List<Song> TGetSongWithAlbum()
+		{
+            return _songDal.GetSongWithAlbum();
+		}
+
 		public void TUpdate(Song entity)
         {
             _songDal.Update(entity);

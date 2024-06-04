@@ -79,5 +79,11 @@ namespace OneMusic.WebUI.Areas.Artist.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult DeleteSong(int id)
+        {
+            _songService.TDelete(id);
+            return RedirectToAction("Index");
+        }
+
     }
 }

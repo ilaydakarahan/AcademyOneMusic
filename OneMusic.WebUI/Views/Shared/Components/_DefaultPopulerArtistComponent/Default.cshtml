@@ -1,0 +1,29 @@
+﻿@model List<AppUser>
+
+<!-- ***** Popular Artists ***** -->
+<div class="col-12 col-lg-4">
+	<div class="popular-artists-area mb-100">
+		<div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+			<p>Yeni Eklenenler</p>
+			<h2>Popüler Sanatçılar</h2>
+		</div>
+
+		@foreach (var item in Model)
+		{
+			<!-- Single Artist -->
+			<div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="100ms">
+				<div class="thumbnail">
+					<img src="@item.ImageUrl" alt="">
+				</div>
+				<div class="content-">
+					<p>@item.Name @item.Surname</p>
+				</div>
+			</div>
+		}
+
+
+	</div>
+</div>
+
+	</div>
+</div>

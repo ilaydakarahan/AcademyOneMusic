@@ -25,8 +25,13 @@
             <td>@item.SongName</td>
             <td>@item.Album.AlbumName</td>
             <td>
+                <audio preload="auto" controls>
+                    <source src="@item.SongUrl" />
+                </audio>
+            </td>
+
+            <td>
                 <button class="btn btn-outline-danger" onclick="deleteMySong(@item.SongId)">Sil</button>
-                <a class="btn btn-outline-info" asp-action="UpdateSong" asp-route-id="@item.SongId">Güncelle</a>
             </td>
         </tr>
     }
