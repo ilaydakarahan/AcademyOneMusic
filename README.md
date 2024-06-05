@@ -3,35 +3,32 @@
 
 ![Screenshot_11](https://github.com/ilaydakarahan/AcademyOneMusic/assets/108287807/d687ca3c-86a4-4490-923e-921976a542f4)
 
-Bu proje MVC5 teknolojileri kullanılarak yapılan bir Eğitim Sitesi projesidir.Proje içerisinde üç farklı kullanıcı tipi bulunmakta ve bu kullanıcı tipine göre belli özellikler barındırmakta.
-Admin , Eğitmen , Öğrenci giriş, çıkış yapabilir. Yeni öğrenci kaydı oluşturulabilir. 
-Ayrıca kullanıcı mesaj gönderebilir.
+
 
 ### 1-Admin/Yönetici Rolü 
 ---
-* :bald_man: **Rol İşlemleri :** Yönetici anasayfada listelenen kategorileri listeleyebilir, yeni kategori ekleyebilir, düzenleyebilir ve silebilir.
-* :page_with_curl: **Kategori İşlemleri :** Yönetici anasayfada listelenen kategorileri listeleyebilir, yeni kategori ekleyebilir, düzenleyebilir ve silebilir.
-* :notes: **Albüm İşlemleri :** Yönetici anasayfada sınıfları tercih edilme oranlarına göre listeleyebilir, yeni sınıf ekleyebilir, düzenleyebilir ve silebilir.
-* :books: **Kurs İşlemleri :** Yönetici anasayfada eklenme tarihine göre kursları listeleyebilir; yeni kurs ekleyebilir, düzenleyebilir ve silebilir.
-* :grey_exclamation: :grey_exclamation: **Hakkımızda İşlemleri :**
-* :telephone: **İletişim İşlemleri :** 
+* :bald_man: **Rol İşlemleri :** Yönetici yeni kayıt olan visitor rolündeki kişilere rol atama işlemi gerçekleştirebilir, yeni rol ekleyebilir ve silebilir.
+* :page_with_curl: **Kategori İşlemleri :** Yönetici albümlere kategori atayabilir, anasayfada albümlerin kategorilerine göre filtreleme işlemi yapılabilir.
+* :notes: **Albüm İşlemleri :** Yönetici albümleri listeleyebilir, yeni albüm ekleyebilir, güncelleyebilir ve silebilir.
+* :grey_exclamation: :grey_exclamation: **Hakkımızda İşlemleri :** Yönetici hakkımızda alanını düzenleyebilir, yeni kısım ekleyebilir, silebilir ve listeleyebilir.
+* :telephone: **İletişim İşlemleri :** Yönetici iletişim bilgilerini listeleyebilir, konum bilgisi ekleyebilir, silebilir ve düzenleyebilir.
+* :email: **Mesaj İşlemleri :** Yönetici gelen mesajları listeleyebilir.
 
 ### 2-Artist Rolü
 ---
-* :notes: **Albüm İşlemleri :** Öğrenci kurslara kayıt olablir; kayıt olduğu kursa ait olan ders videolarını izleyebilir.
-* :microphone: **Şarkı İşlemleri :** Öğrenci kurslara yorum yapıp puan verebilir, güncelleyebilir.
+* :notes: **Albüm İşlemleri :** Artist albüm ekleyebilir, düzenleyebilir, listeleyebilir ve silebilir.
+* :microphone: **Şarkı İşlemleri :** Artist albümlerine bilgisayardan dosya seçerek şarkı ekleyebilir(mp3 formatında), silebilir ve listeleyebilir.
 
 ### 3-Ziyaretçi Rolü 
 ---
-* :old_key: **Kayıt İşlemleri :** Eğitmen kendine ait olan kursları listeleyebilir, ekleme ve güncelleme yapabilir.
-* :email: **Mesaj İşlemleri :** Eğitmen kurslara bağlı olarak ders videolarını listeleyebilir, ekleyebilir ve güncelleme yapabilir.
-
+* :old_key: **Kayıt İşlemleri :** Ziyaretçi sayfaya kayıt olup adminden kendisine rol atamasını isteyebilir.
+* :email: **Mesaj İşlemleri :** Ziyaretçi mesaj gönderebilir.
 
 
 
 * #### Admin olarak giriş yapmak için gerekli olan bilgiler: 
 
-   - **Kullanıcı Adı :** iayda01
+   - **Kullanıcı Adı :** ilayda01
 
    - **Şifre**: 123456Pp*
 
